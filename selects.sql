@@ -1,3 +1,13 @@
+-- 2) antra lentele
+
+CREATE TABLE uzsakymai (
+    uzsakymo_nr bigint PRIMARY KEY AUTO_INCREMENT,
+    uzsakymo_kaina decimal(20, 2) NOT NULL,
+    uzsakymo_data int NOT NULL,
+    kliento_id bigint NOT NULL,
+    FOREIGN KEY (kliento_id) REFERENCES klientai(kliento_id)
+);
+
 -- 4)
 
 SELECT * 
