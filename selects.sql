@@ -66,7 +66,7 @@ SELECT vardas, pavarde, uzsakymo_data
 FROM klientai
 LEFT JOIN uzsakymai
 ON klientai.kliento_id = uzsakymai.kliento_id
-WHERE uzsakymo_data <= '2020-01-01'
+WHERE uzsakymo_data <= '2020-01-01';
 
 -- 13)
 
@@ -80,3 +80,4 @@ ON klientai.kliento_id = uzsakymai.kliento_id
 ORDER BY pristatymas DESC;
 
 -- 14) -- !!nebaigta
+
