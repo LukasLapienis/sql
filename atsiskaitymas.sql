@@ -1,9 +1,9 @@
 -- 1) 2) 3)
 
 create table klientai (
-	kliento_id bigint PRIMARY KEY AUTO_INCREMENT,
-	vardas VARCHAR(15) NOT NULL,
-	pavarde VARCHAR(15) NOT NULL
+	kliento_id int PRIMARY KEY AUTO_INCREMENT,
+	vardas varchar(15) NOT NULL,
+	pavarde varchar(15) NOT NULL
 );
 
 insert into klientai (vardas, pavarde) values ('Kęstutis', 'Gedgaudas');
@@ -28,11 +28,11 @@ insert into klientai (vardas, pavarde) values ('Vytautas', 'Vaitkus');
 insert into klientai (vardas, pavarde) values ('Gintaras', 'Lukauskas');
 
 create table uzsakymai (
-	uzsakymo_nr bigint PRIMARY KEY AUTO_INCREMENT,
-	saskaitos_data DATE,
-	saskaitos_numeris INT(8),
-	saskaitos_suma DECIMAL(7, 2) NOT NULL,
-	kliento_id bigint NOT NULL,
+	uzsakymo_nr int PRIMARY KEY AUTO_INCREMENT,
+	saskaitos_data date,
+	saskaitos_numeris int(8),
+	saskaitos_suma decimal(7, 2) NOT NULL,
+	kliento_id int NOT NULL,
     FOREIGN KEY (kliento_id) REFERENCES klientai(kliento_id)
 );
 
